@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="card col-md-4 mx-auto">
+    <div class="card-body">
+      <h4 class="card-title text-center">Register</h4>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="login" class="form-label">Login</label>
+          <input type="text" id="login" class="form-control" formControlName="login">
+          @if(registerForm.get('login')?.invalid && registerForm.get('login')?.touched)
+          {
+            <div *ngIf="registerForm.get('login')?.invalid && registerForm.get('login')?.touched" class="text-danger">
+              Login is required
+            </div>
+          }
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" formControlName="password">
+          @if(registerForm.get('password')?.invalid && registerForm.get('password')?.touched)
+          {
+            <div class="text-danger">
+              Password is required
+            </div>
+          }
+        </div>
+        <button type="submit" class="btn btn-primary w-100" [disabled]="registerForm.invalid">Register</button>
+      </form>
+    </div>
+  </div>
+</div>

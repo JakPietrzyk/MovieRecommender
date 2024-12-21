@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  background-color: #2e2e2e;
+  color: #ff9800;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #058f9c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

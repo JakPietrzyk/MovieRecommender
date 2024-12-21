@@ -1,0 +1,7 @@
+@if(isLoading) {
+  <div class="spinner-container">
+    <mat-spinner class="spinner"></mat-spinner>
+  </div>
+} @else {
+  <app-movie-carousel [movies]="movies"></app-movie-carousel>
+}

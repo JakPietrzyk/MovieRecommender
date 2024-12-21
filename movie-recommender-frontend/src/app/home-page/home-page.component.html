@@ -1,0 +1,22 @@
+<div class="hero-section">
+    <app-search-bar></app-search-bar>
+  </div>
+
+@if(authorizationService.isLoggedIn() && !isWishListEmpty) {
+  <section class="movie-sections">
+    <div class="recommendations-section">
+      <h2>Your Recommendations</h2>
+      <app-recomended-movies-carousel></app-recomended-movies-carousel>
+    </div>
+
+    <div class="wishList-section">
+      <app-recommended-movies-from-wishlist-carousel [NUMBER_OF_MOVIES_CAROUSELS]="2"></app-recommended-movies-from-wishlist-carousel>
+    </div>
+
+    <div class="recommendations-for-genre-section">
+      <app-recommended-movies-for-genre-carousel [NUMBER_OF_MOVIES_CAROUSELS]="2"></app-recommended-movies-for-genre-carousel>
+    </div>
+  </section>
+} @else if(!authorizationService.isLoggedIn()) {
+  <h1>Login or Register to access all page functionalities!</h1>
+}

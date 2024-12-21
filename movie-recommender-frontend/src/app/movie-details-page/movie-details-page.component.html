@@ -1,0 +1,57 @@
+<div class="movie-details-container">
+  @if(movie)
+  {
+    <div class="movie-header">
+      <h1 class="movie-title">{{ movie?.title }}</h1>
+    </div>
+
+    <div class="movie-content">
+      <div class="movie-poster">
+        <img [src]="movie?.poster_path" alt="{{ movie?.title }}">
+      </div>
+
+      <div class="movie-info">
+        <p class="movie-overview">{{ movie?.overview }}</p>
+
+        <ul class="movie-stats">
+          <li><strong>Vote average:</strong> {{ movie?.vote_average }}</li>
+          <li><strong>Vote count:</strong> {{ movie?.vote_count }}</li>
+          <li><strong>Production Companies:</strong>
+            <span>
+              @for(company of movie?.production_companies; track company)
+              {
+                {{ company.name }}@if(!$last){, }
+              }
+            </span>
+          </li>
+          <li><strong>Budget:</strong> ${{ movie?.budget }}</li>
+          <li><strong>Runtime:</strong> {{ movie?.runtime }} min</li>
+          <li>
+            <div class="popularity-container">
+              <p>
+                <strong>Popularity:</strong>
+                {{ movie?.popularity }}
+              </p>
+<!--              <div class="popularity-bar">-->
+<!--                <div class="popularity-level" [style.width.%]="movie?.popularity"></div>-->
+<!--              </div>-->
+            </div>
+          </li>
+        </ul>
+
+        <app-wish-list-buttons [selectedMovie]="movie"></app-wish-list-buttons>
+      </div>
+    </div>
+
+    <h4>Similar movies</h4>
+    <div class="movie-carousel-section">
+      @if(isLoading) {
+        <div class="spinner-container">
+          <mat-spinner class="spinner"></mat-spinner>
+        </div>
+      } @else {
+        <app-movie-carousel [movies]="movies"></app-movie-carousel>
+      }
+    </div>
+  }
+</div>

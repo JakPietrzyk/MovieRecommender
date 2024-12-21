@@ -1,0 +1,60 @@
+body {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  border-bottom: 1px solid #444;
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+app-search-bar {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.movie-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.recommendations-section {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommendations-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ff9800;
+  text-align: left;
+}
+
+app-recomended-movies-carousel img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  color: darkred;
+}

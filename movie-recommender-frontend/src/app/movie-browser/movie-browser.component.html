@@ -1,0 +1,24 @@
+<form class="search-form" (ngSubmit)="searchMovie()">
+  <app-movie-suggestion-search-bar></app-movie-suggestion-search-bar>
+  <button class="btn-outline-info" type="submit">Search</button>
+</form>
+<app-filter-bar></app-filter-bar>
+
+@if(isLoading) {
+  <mat-spinner></mat-spinner>
+} @else {
+  <div class="movie-list">
+    @for(movie of movies | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; track $index)
+    {
+      <div (click)="navigateToMovieDetailsPage(movie)" class="movie-item">
+        <img [src]="movie.poster_path" alt="{{ movie.title }}" class="movie-poster" />
+        <h3>
+          <strong class="movie-title">{{ movie.title }}</strong>
+        </h3>
+      </div>
+    }
+  </div>
+}
+
+
+<pagination-controls (pageChange)="onPageChange($event)" class="pagination-controls"></pagination-controls>

@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ selectedMovie?.title }}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+  </div>
+  <div class="modal-body">
+    <img [src]="selectedMovie?.poster_path" alt="{{ selectedMovie?.title }}" class="img-fluid">
+    <p>{{ selectedMovie?.overview }}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.close()">Close</button>
+
+    <app-wish-list-buttons [selectedMovie]="selectedMovie"></app-wish-list-buttons>
+    <button
+      type="button"
+      class="btn btn-outline-info"
+      (click)="openMovieDetailsPage(selectedMovie)"
+    >
+      Show similar movies
+    </button>
+
+  </div>
+

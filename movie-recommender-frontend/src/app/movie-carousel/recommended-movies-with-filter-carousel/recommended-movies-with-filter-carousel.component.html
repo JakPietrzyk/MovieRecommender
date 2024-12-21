@@ -1,0 +1,18 @@
+<div>
+  @if(isLoading) {
+    <div class="spinner-container">
+      <mat-spinner class="spinner"></mat-spinner>
+    </div>
+  } @else {
+    <app-movie-carousel [movies]="movies"></app-movie-carousel>
+  }
+  <div>
+    <h3>Setup filters</h3>
+    <app-filter-bar></app-filter-bar>
+  </div>
+  <div class="filters-buttons">
+    <button (click)="fetchMoviesWithFilters()">Apply filters</button>
+    <button (click)="fetchOtherMoviesWithFilters()">Recommend different movies</button>
+  </div>
+
+</div>

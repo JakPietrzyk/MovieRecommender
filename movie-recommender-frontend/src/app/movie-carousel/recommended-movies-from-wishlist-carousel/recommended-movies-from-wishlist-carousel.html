@@ -1,0 +1,9 @@
+<div class="section">
+  @for(movieRecommendation of this.recommendedMoviesResponse; track $index)
+  {
+    <div class="wishlist-section">
+      <h2>Your Recommendations after watching {{movieRecommendation.movieTitle}}</h2>
+      <app-movie-carousel [movies]="movieRecommendation.recommendedMovies"></app-movie-carousel>
+    </div>
+  }
+</div>

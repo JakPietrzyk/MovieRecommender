@@ -1,0 +1,87 @@
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.movie-item {
+  flex: 0 0 auto;
+  width: 150px;
+  margin: 0 10px;
+}
+
+
+.movie-item img {
+  object-fit: contain;
+  width: 100%;
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100%;
+  background-color: transparent;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: '';
+}
+
+.first-item {
+  margin-left: 60px;
+}
+
+.last-item {
+  margin-right: 220px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.wishlist-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ff9800;
+  text-align: left;
+}
+
+.wishlist-section {
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,97 @@
+.movie-details-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  color: #fff;
+  background-color: #1e1e1e;
+  font-family: Arial, sans-serif;
+}
+
+.movie-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffdd57;
+}
+
+.movie-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.movie-poster img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info {
+  flex: 1;
+  padding: 10px;
+}
+
+.movie-overview {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.movie-stats {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-stats li {
+  margin: 5px 0;
+}
+
+.movie-stats strong, h4 {
+  color: #ffdd57;
+}
+
+.movie-carousel-section {
+  margin-top: 30px;
+}
+
+.movie-carousel-section app-movie-carousel {
+  border-top: 2px solid #333;
+  padding-top: 20px;
+}
+
+app-wish-list-buttons {
+  display: block;
+  margin-top: 15px;
+}
+
+.popularity-container {
+  margin: 10px 0;
+}
+
+.popularity-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+}
+
+.popularity-level {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+h4 {
+  margin: 15px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+}

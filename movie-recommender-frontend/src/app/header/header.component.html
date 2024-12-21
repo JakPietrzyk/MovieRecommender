@@ -1,0 +1,28 @@
+<header class="header">
+  <nav>
+    <ul>
+      <li>
+        <button (click)="navigateToHome()">Home</button>
+      </li>
+      @if (isLoggedIn()) {
+        <li>
+          <button class="recommend-btn" (click)="navigateToRecommend()">Recommend movie</button>
+        </li>
+        <li>
+          <button class="wishList-btn" (click)="navigateToWishList()">Wishlist</button>
+        </li>
+      }
+      <li>
+        <button class="movie-browser-btn" (click)="navigateToMovieBrowser()">Movie Browser</button>
+      </li>
+    </ul>
+  </nav>
+  <div class="auth-buttons">
+    @if (isLoggedIn()) {
+      <button class="logout-btn" (click)="onLogoutClick()">Logout</button>
+    } @else {
+      <button class="register-btn" (click)="onRegisterClick()">Register</button>
+      <button class="login-btn" (click)="onLoginClick()">Login</button>
+    }
+  </div>
+</header>

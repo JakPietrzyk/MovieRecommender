@@ -1,0 +1,21 @@
+@if(authorizationService.isLoggedIn())
+{
+  @if(isMovieInWishlist)
+  {
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="removeFromWishList(selectedMovie)"
+    >
+      Remove from Wishlist
+    </button>
+  } @else {
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="addToWishlist(selectedMovie)"
+    >
+      Add to Wishlist
+    </button>
+  }
+}

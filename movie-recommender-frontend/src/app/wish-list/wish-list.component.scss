@@ -1,0 +1,46 @@
+.wish-list-container {
+  padding: 20px;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-title {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #ff9800;
+  text-decoration: none;
+}
+
+.movie-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.movie-item {
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-posters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+h2 {
+  margin: 15px;
+  font-size: 48px;
+  color: #ff9800;
+}
+
+div {
+  max-width: 1700px;
+  margin: 0 auto;
+}

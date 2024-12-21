@@ -1,0 +1,27 @@
+<div class="filter-bar">
+  <label>
+    Genre:
+    <select [(ngModel)]="selectedGenre">
+      <option value="">What interests you?</option>
+      <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+    </select>
+  </label>
+
+  <label>
+    Release Date:
+    <input
+      type="range"
+      [(ngModel)]="selectedReleaseDate"
+      min="1900"
+      max="{{ currentYear }}"
+      step="1"
+    />
+    <input type="number" [(ngModel)]="selectedReleaseDate" min="1900" max="{{ currentYear }}" />
+  </label>
+
+  <label>
+    Rating:
+    <input type="range" [(ngModel)]="selectedRating" min="0" max="10" step="0.1" />
+    <input type="number" [(ngModel)]="selectedRating" min="0" max="10" step="0.1" />
+  </label>
+</div>
